@@ -7,14 +7,18 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace QuickTaskApp.Views._views
+namespace QuickTaskApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TaskView : ContentView
+    public partial class TaskDetailPage : ContentPage
     {
-        public TaskView()
+        public TaskDetailPage()
         {
             InitializeComponent();
+        }
+        async private void CreateButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new TaskPage()));
         }
     }
 }

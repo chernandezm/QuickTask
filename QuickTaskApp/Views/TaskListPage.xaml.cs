@@ -21,7 +21,7 @@ namespace QuickTaskApp.Views
 
             Items = new ObservableCollection<Item>();
             Items.Add(new Item { Id = 1, Description = "Lorem ipsum dolor sit amet consectetur adipiscing, elit sapien primis mi inceptos porta massa, accumsan risus leo conubia curae. Ac porta velit vitae porttitor pharetra scelerisque hac, curae nisi felis cras ridiculus facilisis tempus, nec etiam laoreet vivamus rutrum elementum. ", Price = "$ 2.500", Quantity = "requiere: 3", Text = "Diego Goméz" });
-            Items.Add(new Item { Id = 2, Description = "Lorem ipsum dolor sit amet consectetur adipiscing, elit sapien primis mi inceptos porta massa, accumsan risus leo conubia curae. Ac porta velit vitae porttitor pharetra scelerisque hac, curae nisi felis cras ridiculus facilisis tempus, nec etiam laoreet vivamus rutrum elementum. ", Price = "$ 5.000", Quantity = "requiere: 3", Text = "Diego Gómez" });
+            Items.Add(new Item { Id = 2, Description = "Lorem ipsum dolor sit amet consectetur adipiscing, elit sapien primis mi inceptos porta massa, accumsan risus leo conubia curae. Ac porta velit vitae porttitor pharetra scelerisque hac, curae nisi felis cras ridiculus facilisis tempus, nec etiam laoreet vivamus rutrum elementum. ", Price = "$ 5.000", Quantity = "requiere: 3", Text = "Lorena Hernández" });
 
 
             MyListView.ItemsSource = Items;
@@ -36,6 +36,11 @@ namespace QuickTaskApp.Views
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
+        }
+
+        async private void CreateButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new TaskPage()));
         }
     }
 }

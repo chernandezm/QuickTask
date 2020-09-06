@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="QuickTaskApp.Views.TaskListPage">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
     <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
             HasUnevenRows="True"
@@ -32,4 +33,13 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" VerticalOptions="EndAndExpand" BackgroundColor="LightGray"/>
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HeightRequest="60" BackgroundColor="Transparent">
+            <ImageButton Source="Guardadas.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+            <ImageButton Source="Buscar.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+            <ImageButton Source="Crear.png" WidthRequest="70" HeightRequest="70" HorizontalOptions="CenterAndExpand" BackgroundColor="White" Clicked="CreateButton_Clicked"/>
+            <ImageButton Source="Realizadas.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+            <ImageButton Source="Perfil.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

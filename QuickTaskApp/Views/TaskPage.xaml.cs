@@ -16,5 +16,10 @@ namespace QuickTaskApp.Views
         {
             InitializeComponent();
         }
+
+        async private void Save_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage()) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea"});
+        }
     }
 }
